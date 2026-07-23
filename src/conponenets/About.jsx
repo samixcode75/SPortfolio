@@ -1,5 +1,5 @@
 import profilePic from "./download.png";
-
+import { Link, NavLink } from "react-router";
 function About() {
   const highlights = [
     {
@@ -133,12 +133,12 @@ function About() {
 
             <div className="mt-12">
 
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-xl font-semibold transition duration-300 hover:scale-105"
               >
                 Let's Connect →
-              </a>
+              </Link>
 
             </div>
 

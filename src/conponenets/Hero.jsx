@@ -1,5 +1,6 @@
 import React from 'react'
 import profilePic from "./download.png";
+import { Link, NavLink } from "react-router";
 function Hero() {
 
 
@@ -33,12 +34,8 @@ function Hero() {
  </div>
 
   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-     <a
-              href="#projects"
-              className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition duration-300"
-            >
-              View Projects
-            </a>
+    <Link to="/projects" 
+    className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition duration-300">View Projects</  Link>
 
              <a
               href="/resume.pdf"
