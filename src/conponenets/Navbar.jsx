@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router";
 function Navbar() {
   return (
     <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
 
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-400">
@@ -12,7 +12,7 @@ function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+        <ul className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 w-full md:w-auto">
 
           <li>
             <NavLink
@@ -125,7 +125,7 @@ function Navbar() {
         <a
           href="/resume.pdf"
           download
-          className="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-lg transition-colors duration-300 w-full md:w-auto text-center"
+          className="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-lg transition-colors duration-300 self-start md:self-auto"
         >
           Download CV
         </a>
