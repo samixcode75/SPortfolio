@@ -3,26 +3,27 @@ import { Link, NavLink } from "react-router";
 
 function Navbar() {
   return (
-    <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <aside className="w-64 h-screen bg-gray-900 text-white fixed left-0 top-0 flex flex-col justify-between">
 
+      <div>
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-blue-400">
-          Sami<span className="text-white">.</span>
-        </Link>
+        <div className="p-6 border-b border-gray-700">
+          <Link to="/" className="text-2xl font-bold text-blue-400">
+            Sami<span className="text-white">.</span>
+          </Link>
+        </div>
 
         {/* Navigation */}
-        <ul className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 w-full md:w-auto">
+        <ul className="flex flex-col mt-6 gap-2 px-4">
 
           <li>
             <NavLink
               to="/"
+              end
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               Home
@@ -33,11 +34,9 @@ function Navbar() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               About
@@ -48,11 +47,9 @@ function Navbar() {
             <NavLink
               to="/skills"
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               Skills
@@ -63,11 +60,9 @@ function Navbar() {
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               Projects
@@ -78,11 +73,9 @@ function Navbar() {
             <NavLink
               to="/education"
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               Education
@@ -93,11 +86,9 @@ function Navbar() {
             <NavLink
               to="/certificates"
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               Certificates
@@ -108,11 +99,9 @@ function Navbar() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `transition-colors duration-200 ${
-                  isActive
-                    ? "text-blue-500"
-                    : "text-gray-300 hover:text-orange-500"
-                }`
+                `block py-3 px-4 rounded-lg duration-200 ${
+                  isActive ? "text-blue-700 bg-gray-800" : "text-gray-300"
+                } hover:bg-gray-800 hover:text-orange-500`
               }
             >
               Contact
@@ -120,18 +109,20 @@ function Navbar() {
           </li>
 
         </ul>
+      </div>
 
-        {/* Download CV */}
+      {/* Download CV */}
+      <div className="p-4 border-t border-gray-700">
         <a
           href="/resume.pdf"
           download
-          className="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-lg transition-colors duration-300 self-start md:self-auto"
+          className="block text-center bg-blue-500 hover:bg-blue-600 py-3 rounded-lg transition-colors"
         >
           Download CV
         </a>
-
       </div>
-    </nav>
+
+    </aside>
   );
 }
 
