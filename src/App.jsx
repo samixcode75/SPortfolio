@@ -9,9 +9,8 @@ function App() {
     <>
       <Navbar />
 
-      <main className="pt-16 md:pt-20 ml-24 md:ml-0">
         <Outlet />
-      </main>
+  
     </>
   );
 }
