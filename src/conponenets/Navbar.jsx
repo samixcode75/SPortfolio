@@ -14,75 +14,76 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3">
 
         {/* Mobile Layout */}
-        <div className="flex md:hidden justify-between items-start gap-6">
+<div className="flex md:hidden justify-between items-start gap-6">
 
-          {/* Logo */}
-          <Link
-            to="/"
-            className="text-2xl font-bold text-blue-400 flex-shrink-0"
-          >
-            Sami<span className="text-white">.</span>
-          </Link>
+  {/* Left Side */}
+  <div className="flex flex-col items-start">
 
-          {/* Right Side */}
-          <div className="flex flex-col items-end">
+    <Link
+      to="/"
+      className="text-2xl font-bold text-blue-400"
+    >
+      Sami<span className="text-white">.</span>
+    </Link>
 
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+    <a
+      href="/resume.pdf"
+      download
+      className="mt-4 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg transition-colors duration-300 text-sm"
+    >
+      Download CV
+    </a>
 
-              <li>
-                <NavLink to="/" end className={navLink}>
-                  Home
-                </NavLink>
-              </li>
+  </div>
 
-              <li>
-                <NavLink to="/about" className={navLink}>
-                  About
-                </NavLink>
-              </li>
+  {/* Right Side */}
+  <ul className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
 
-              <li>
-                <NavLink to="/skills" className={navLink}>
-                  Skills
-                </NavLink>
-              </li>
+    <li>
+      <NavLink to="/" end className={navLink}>
+        Home
+      </NavLink>
+    </li>
 
-              <li>
-                <NavLink to="/projects" className={navLink}>
-                  Projects
-                </NavLink>
-              </li>
+    <li>
+      <NavLink to="/about" className={navLink}>
+        About
+      </NavLink>
+    </li>
 
-              <li>
-                <NavLink to="/education" className={navLink}>
-                  Education
-                </NavLink>
-              </li>
+    <li>
+      <NavLink to="/skills" className={navLink}>
+        Skills
+      </NavLink>
+    </li>
 
-              <li>
-                <NavLink to="/certificates" className={navLink}>
-                  Certificates
-                </NavLink>
-              </li>
+    <li>
+      <NavLink to="/projects" className={navLink}>
+        Projects
+      </NavLink>
+    </li>
 
-              <li>
-                <NavLink to="/contact" className={navLink}>
-                  Contact
-                </NavLink>
-              </li>
+    <li>
+      <NavLink to="/education" className={navLink}>
+        Education
+      </NavLink>
+    </li>
 
-            </ul>
+    <li>
+      <NavLink to="/certificates" className={navLink}>
+        Certificates
+      </NavLink>
+    </li>
 
-            <a
-              href="/resume.pdf"
-              download
-              className="mt-3 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg transition-colors duration-300 text-sm"
-            >
-              Download CV
-            </a>
+    <li>
+      <NavLink to="/contact" className={navLink}>
+        Contact
+      </NavLink>
+    </li>
 
-          </div>
-        </div>
+  </ul>
+
+</div>
 
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center justify-between">
