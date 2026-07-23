@@ -3,14 +3,17 @@ import { Link, NavLink } from "react-router";
 
 function Navbar() {
   return (
-    <aside className="w-64 h-screen bg-gray-900 text-white fixed left-0 top-0 flex flex-col justify-between">
+   <aside className="fixed left-0 top-0 w-20 md:w-64 h-screen bg-gray-900 text-white flex flex-col justify-between">
 
       <div>
         {/* Logo */}
         <div className="p-6 border-b border-gray-700">
-          <Link to="/" className="text-2xl font-bold text-blue-400">
-            Sami<span className="text-white">.</span>
-          </Link>
+          <Link
+  to="/"
+  className="text-lg md:text-2xl font-bold text-blue-400 text-center"
+>
+  Sami<span className="text-white">.</span>
+</Link>
         </div>
 
         {/* Navigation */}
