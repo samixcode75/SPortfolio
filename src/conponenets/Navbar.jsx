@@ -12,9 +12,9 @@ function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-row items-center gap-3 md:gap-8">
 
-          <li>
+          <li className="text-center" >
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -29,7 +29,7 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="text-center">
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -44,7 +44,7 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="text-center">
             <NavLink
               to="/skills"
               className={({ isActive }) =>
@@ -59,7 +59,7 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="text-center">
             <NavLink
               to="/projects"
               className={({ isActive }) =>
@@ -74,7 +74,7 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="text-center">
             <NavLink
               to="/education"
               className={({ isActive }) =>
@@ -89,7 +89,7 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="text-center">
             <NavLink
               to="/certificates"
               className={({ isActive }) =>
@@ -104,7 +104,7 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li>
+          <li className="text-center">
             <NavLink
               to="/contact"
               className={({ isActive }) =>
