@@ -23,6 +23,7 @@ function ProjectCard({ project }) {
           muted
           loop
           playsInline
+           preload="metadata"
           className="w-full h-56 object-cover transition-transform duration-500 hover:scale-105"
         >
           <source src={project.video} type="video/mp4" />
